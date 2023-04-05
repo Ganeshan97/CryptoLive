@@ -56,8 +56,13 @@
       align-items: center;
       cursor: grab;
 
-      @media (max-width: 1100px) {
-        display: none;
+      @media (max-width: 800px) {
+        position: absolute;
+        top: 1%;
+        left: 19%;
+        width: 25rem;
+        height: 25rem;
+        z-index: 1;
       }
     }
   }
