@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+//colors
+$color-white: #f3f2f4;
+$color-blue-purp: linear-gradient(25deg, #ecf2ff, #eeeeee);
+$bg-black: #d6e4e5;
+$green: rgb(14, 203, 129);
+
+// font families
+$big-font: "Space Grotesk", sans-serif;
+$small-font: "Noto Sans Georgian", sans-serif;
+
+// font sizes
+$h1-size: 7rem;
+$h2-size: 6rem;
+$h4-size: 2.2rem;
+$text-normal: 2rem;
+$text-mini: 1.8rem;
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  font-family: $big-font;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 130rem !important;
+  margin: 0 auto !important;
+  padding: 0 2.5rem !important;
+}
+
+// scroll
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #130749 #ffffff;
+}
+
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+  width: 12px;
+}
+*::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background-color: #130749;
+  border: 1px solid #ffffff;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #130749;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: #130749;
+}
+
+// spiner
+
+.loader {
+  margin: 10rem auto;
+  width: 64px;
+  height: 64px;
+  position: relative;
+  background-image: linear-gradient(#fff 16px, transparent 0),
+    linear-gradient(#130749 16px, transparent 0),
+    linear-gradient(#130749 16px, transparent 0),
+    linear-gradient(#fff 16px, transparent 0);
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  background-position: left top, left bottom, right top, right bottom;
+  animation: rotate 1s linear infinite;
+}
+@keyframes rotate {
+  0% {
+    width: 64px;
+    height: 64px;
+    transform: rotate(0deg);
+  }
+  50% {
+    width: 30px;
+    height: 30px;
+    transform: rotate(180deg);
+  }
+  100% {
+    width: 64px;
+    height: 64px;
+    transform: rotate(360deg);
+  }
+}
