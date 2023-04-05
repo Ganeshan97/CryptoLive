@@ -434,7 +434,7 @@ nav a {
   display: flex;
   flex-direction: column;
   white-space: nowrap;
-  overflow-x: auto;
+  overflow-x: hidden;
 }
 .market-content__coin-list__top {
   display: grid;
